@@ -1,11 +1,8 @@
 package com.vn.ncb.service.info.model;
 
 import java.io.Serializable;
-import java.util.Date;
-import javax.validation.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.google.gson.annotations.SerializedName;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -54,7 +51,7 @@ public class ReveiveQRNapas implements Serializable {
 	public static class Requestor implements Serializable {
 
 		@JsonProperty("id")
-		private String requestorId;
+		private String id;
 		
 		@JsonProperty("name")
 		private String name;
@@ -70,13 +67,13 @@ public class ReveiveQRNapas implements Serializable {
 		private Payment payment;
 		
 		@JsonProperty("amount")
-		private Number amount;
+		private String amount;
 
 		@JsonProperty("currency")
 		private String currency;
 
 		@JsonProperty("sender_account")
-		private String senderAccount;
+		private String sender_account;
 		
 		@JsonProperty("sender")
 		private Sender sender;
@@ -85,10 +82,10 @@ public class ReveiveQRNapas implements Serializable {
 		private Participant participant;
 
 		@JsonProperty("recipient_account")
-		private String recipientAccount;
+		private String recipient_account;
 
 		@JsonProperty("order_info")
-		private OrderInfo orderInfo;
+		private OrderInfo order_info;
 	}
 
 	@Data
@@ -98,7 +95,7 @@ public class ReveiveQRNapas implements Serializable {
 	public static class Payment implements Serializable {
 
 		@JsonProperty("generation_method")
-		private String generationMethod;
+		private String generation_method;
 		
 		@JsonProperty("type")
 		private String type;
@@ -107,13 +104,13 @@ public class ReveiveQRNapas implements Serializable {
 		private String channel;
 
 		@JsonProperty("transaction_local_date_time")
-		private Date transactionLocalDateTime;
+		private String transaction_local_date_time;
 
 		@JsonProperty("trace")
 		private String trace;
 
 		@JsonProperty("payment_reference")
-		private String paymentReference;
+		private String payment_reference;
 	}
 
 	@Data
@@ -123,7 +120,7 @@ public class ReveiveQRNapas implements Serializable {
 	public static class Sender implements Serializable {
 
 		@JsonProperty("full_name")
-		private String fullName;
+		private String full_name;
 	}
 
 	@Data
@@ -133,28 +130,28 @@ public class ReveiveQRNapas implements Serializable {
 	public static class Participant implements Serializable {
 
 		@JsonProperty("originating_institution_id")
-		private String originatingInstitutionId;
+		private String originating_institution_id;
 
 		@JsonProperty("receiving_institution_id")
-		private String receivingInstitutionId;
+		private String receiving_institution_id;
 
 		@JsonProperty("merchant_id")
-		private String merchantId;
+		private String merchant_id;
 
 		@JsonProperty("card_acceptor_id")
-		private String cardAcceptorId;
+		private String card_acceptor_id;
 
 		@JsonProperty("card_acceptor_name")
-		private String cardAcceptorName;
+		private String card_acceptor_name;
 
 		@JsonProperty("card_acceptor_city")
-		private String cardAcceptorCity;
+		private String card_acceptor_city;
 
 		@JsonProperty("card_acceptor_country")
-		private String cardAcceptorCountry;
+		private String card_acceptor_country;
 
 		@JsonProperty("merchant_category_code")
-		private String merchantCategoryCode;
+		private String merchant_category_code;
 
 	}
 
@@ -165,7 +162,7 @@ public class ReveiveQRNapas implements Serializable {
 	public static class OrderInfo implements Serializable {
 
 		@JsonProperty("bill_number")
-		private String billNumber;
+		private String bill_number;
 	}
 
 }
